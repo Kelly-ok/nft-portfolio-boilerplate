@@ -61,21 +61,6 @@ export default function Footer() {
                       Dashboard
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/marketplace" className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
-                      Marketplace
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/bulk-listing" className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
-                      Bulk Listing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/pricing" className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
-                      Pricing
-                    </Link>
-                  </li>
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
