@@ -24,6 +24,7 @@ import Web3MarketModal from '@/components/ui/Web3MarketModal';
 import { useWeb3MarketModal } from '@/hooks/useWeb3MarketModal';
 import Footer from '@/components/layout/Footer';
 import { Info } from 'lucide-react';
+import MobileMenu from '@/components/ui/MobileMenu';
 
 export default function Home() {
   // Replace old context hooks with wagmi hooks
@@ -125,25 +126,30 @@ export default function Home() {
   }, [nfts, activeFilter, isNFTListed, setDisplayedNFTs, handlePageChange]);
 
   return (
-    <div className="min-h-screen p-8 pb-20 gap-8 sm:p-10 font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen p-4 sm:p-6 lg:p-8 pb-20 gap-8 sm:pb-20 lg:pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-10">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+        <div className="flex justify-between items-center mb-6 sm:mb-10">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             Your NFT Portfolio
           </h1>
-          <div className="flex items-center gap-3">
+
+          {/* Desktop Navigation - Hidden on mobile */}
+          <div className="hidden sm:flex items-center gap-2 sm:gap-3">
             <Button
               variant="ghost"
               size="sm"
               onClick={openModal}
-              className="flex items-center gap-2 text-zinc-600 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400"
+              className="flex items-center gap-1 sm:gap-2 text-zinc-600 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400 px-2 sm:px-3"
             >
               <Info className="h-4 w-4" />
-              <span className="hidden sm:inline">About</span>
+              <span>About</span>
             </Button>
             {/* Use RainbowKit ConnectButton */}
             <ConnectButton />
           </div>
+
+          {/* Mobile Menu - Only visible on mobile */}
+          <MobileMenu onOpenWeb3MarketModal={openModal} />
         </div>
         <p className="text-zinc-600 dark:text-zinc-400 mb-6">
           View, manage, and sell your NFT collection across multiple marketplaces
