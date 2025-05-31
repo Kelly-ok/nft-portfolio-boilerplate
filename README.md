@@ -5,6 +5,7 @@ A comprehensive, open-source NFT portfolio management platform built by the **We
 **🔗 Marketplace Aggregation**: Leverages NFTGo's marketplace aggregator to seamlessly list NFTs on multiple platforms including OpenSea, LooksRare, and more marketplaces coming in the future.
 
 🌐 **Website**: [web3market.site](https://web3market.site)
+🚀 **Live Demo**: [nft-portfolio.web3market.site](https://nft-portfolio.web3market.site/)
 
 ## ✨ Features
 
@@ -33,8 +34,10 @@ A comprehensive, open-source NFT portfolio management platform built by the **We
 - **IPFS Media Support**: Automatic detection and rendering of images, videos, and audio
 - **Traits & Attributes**: Comprehensive NFT metadata display
 - **Price Estimation**: Bulk pricing analysis using NFTGo's AI-powered pricing
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Responsive Design**: Mobile-first approach with Tailwind CSS v4
+- **Mobile Navigation**: Slide-in hamburger menu with smooth animations for mobile devices
 - **Dark/Light Mode**: Seamless theme switching
+- **Social Integration**: Direct links to Web3Market social channels
 
 ### 🔐 **Web3 Integration**
 - **RainbowKit**: Modern wallet connection with support for 100+ wallets
@@ -130,32 +133,53 @@ src/
 │   │   ├── nftgo/         # NFTGo API proxy endpoints
 │   │   └── moralis/       # Moralis API proxy endpoints
 │   ├── nft/               # Individual NFT detail pages
-│   └── page.tsx           # Main portfolio dashboard
+│   │   └── [contractAddress]/[tokenId]/
+│   │       └── offers/    # NFT offers page
+│   ├── globals.css        # Global styles with Tailwind CSS v4
+│   ├── hero.ts           # HeroUI configuration
+│   ├── layout.tsx        # Root layout component
+│   ├── page.tsx          # Main portfolio dashboard
+│   └── providers.tsx     # App providers (Wagmi, RainbowKit, etc.)
 ├── components/            # Reusable UI components
-│   ├── marketplace/       # Trading and listing components
-│   ├── nft/              # NFT display components
-│   ├── ui/               # Base UI components
-│   └── wallet/           # Wallet connection components
-├── context/              # React Context providers
-│   ├── NFTContext.tsx    # NFT data management
-│   └── PriceContext.tsx  # Pricing data management
-├── services/             # External API integrations
-│   └── marketplace/      # Marketplace service implementations
-├── hooks/                # Custom React hooks
-├── lib/                  # Utility libraries and configurations
-├── types/                # TypeScript type definitions
-└── utils/                # Helper functions
+│   ├── debug/            # Development debugging components
+│   ├── icons/            # Custom icon components
+│   ├── layout/           # Layout components (Header, Footer)
+│   ├── marketplace/      # Trading and listing components
+│   ├── nft/             # NFT display components
+│   ├── ui/              # Base UI components (modals, buttons, etc.)
+│   └── wallet/          # Wallet connection components
+├── config/              # Application configuration
+│   └── app.config.json  # App-wide settings
+├── context/             # React Context providers
+│   ├── MagicEdenContext.tsx  # Magic Eden integration
+│   ├── NFTContext.tsx   # NFT data management
+│   └── PriceContext.tsx # Pricing data management
+├── hooks/               # Custom React hooks
+│   ├── useNFTListings.ts    # NFT listings management
+│   └── useWeb3MarketModal.ts # Modal state management
+├── lib/                 # Utility libraries and configurations
+│   ├── constants.ts     # App constants
+│   ├── dev-utils.ts     # Development utilities
+│   ├── utils.ts         # General utilities
+│   └── walletConnectConfig.ts # Wallet connection config
+├── services/            # External API integrations
+│   └── marketplace/     # Marketplace service implementations
+├── types/               # TypeScript type definitions
+│   └── index.ts         # Main type definitions
+└── utils/               # Helper functions
+    ├── formatters.ts    # Data formatting utilities
+    └── ipfs.ts          # IPFS handling utilities
 ```
 
 ## 🛠️ Technology Stack
 
 ### Frontend
-- **Next.js 15**: React framework with App Router
+- **Next.js 15**: React framework with App Router and Turbopack
 - **React 19**: Latest React with concurrent features
 - **TypeScript**: Type-safe development
-- **Tailwind CSS 4**: Utility-first CSS framework
+- **Tailwind CSS v4**: Modern utility-first CSS framework with CSS-first configuration
 - **Framer Motion**: Smooth animations and transitions
-- **HeroUI**: Modern React component library
+- **HeroUI**: Modern React component library (formerly NextUI)
 
 ### Web3 & Blockchain
 - **Wagmi**: React hooks for Ethereum
@@ -170,8 +194,8 @@ src/
 
 ### Development Tools
 - **ESLint**: Code linting and formatting
-- **PostCSS**: CSS processing
-- **React Query**: Server state management
+- **PostCSS**: CSS processing with Tailwind CSS v4 plugin
+- **TanStack Query**: Server state management (formerly React Query)
 
 ## 📋 Available Scripts
 
@@ -265,10 +289,26 @@ const nextConfig: NextConfig = {
 
 ### Styling
 
-The project uses Tailwind CSS with custom configurations:
-- **Colors**: Modify `tailwind.config.js` for brand colors
+The project uses **Tailwind CSS v4** with modern CSS-first configuration:
+- **Theme Configuration**: Define custom colors, fonts, and breakpoints directly in `src/app/globals.css` using the `@theme` directive
+- **No Config File Required**: Tailwind CSS v4 eliminates the need for `tailwind.config.js`
+- **CSS Variables**: Native CSS custom properties for theme values
 - **Components**: Styled with HeroUI components
 - **Animations**: Custom animations with Framer Motion
+
+#### Example Theme Customization
+
+```css
+/* src/app/globals.css */
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: oklch(0.7 0.15 200);
+  --color-brand-secondary: oklch(0.8 0.1 300);
+  --font-family-display: "Inter", sans-serif;
+  --breakpoint-3xl: 1920px;
+}
+```
 
 ### Adding New Marketplaces
 
